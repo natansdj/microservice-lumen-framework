@@ -7,7 +7,6 @@
 			'core' => \Core\Providers\CoreServiceProvider::class,
 			'auth' => \Core\Providers\AuthServiceProvider::class,
 			'graphql' => \Core\Providers\GraphQLServiceProvider::class,
-			'app' => \Core\Providers\AppServiceProvider::class,
 		],
 
 		/*
@@ -22,5 +21,7 @@
 		 */
 		'local' => [
 			//
-		]
+		],
+
+		'alias' => [],
 	];

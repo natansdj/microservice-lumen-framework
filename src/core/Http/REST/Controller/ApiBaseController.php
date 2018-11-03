@@ -1,6 +1,6 @@
 <?php
 
-	namespace Core\Http\REST\v1;
+	namespace Core\Http\REST\Controller;
 
 	use Laravel\Lumen\Routing\Controller as BaseController;
 

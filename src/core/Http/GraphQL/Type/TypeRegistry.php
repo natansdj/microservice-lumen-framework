@@ -6,7 +6,7 @@
 	 * Time: 19.11
 	 */
 
-	namespace Core\Http\GraphQL\Type\Contracts;
+	namespace Core\Http\GraphQL\Type;
 
 	use GraphQL\Type\Definition\Type;
 	use GraphQL;

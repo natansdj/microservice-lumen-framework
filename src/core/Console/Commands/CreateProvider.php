@@ -52,7 +52,9 @@
 		 * Boot the authentication services for the application.
 		 *
 		 */
-		public function boot() {}
+		public function boot() {
+			\$this->bootConfig();
+		}
 		
 		/**
 		 * Register any application services.
@@ -61,8 +63,7 @@
 		 */
 		public function register()
 		{
-			\$this->setupAlias();
-			\$this->setupConfig();
+			\$this->registerAlias();
 			\$this->registerSystem();
 			\$this->registerServices();
 			\$this->registerMiddleware();
@@ -98,7 +99,7 @@
 		/**
 		 * Load alias
 		 */
-		protected function setupAlias() {
+		protected function registerAlias() {
 			\$aliases=[
 				//
 			];
@@ -111,7 +112,7 @@
 		/**
 		 * Load config
 		 */
-		protected function setupConfig() {}
+		protected function bootConfig() {}
 	}
 EOT;
 

@@ -6,7 +6,7 @@
 	 * Time: 18.25
 	 */
 
-	namespace Core\Helpers\Policies;
+	namespace Core\Http\Policies;
 
 
 	abstract class AbstractPolicy
