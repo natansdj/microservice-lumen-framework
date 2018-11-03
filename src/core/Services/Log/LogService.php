@@ -6,9 +6,9 @@
 	 * Time: 16.30
 	 */
 
-	namespace App\Services;
+	namespace Core\Services;
 
-	use App\Exceptions\LogsException;
+	use Core\Exceptions\LogsException;
 	use Carbon\Carbon;
 	use Monolog\Formatter\JsonFormatter;
 	use Monolog\Logger;

@@ -1,5 +1,5 @@
 <?php
-	namespace App\Repositories\Eloquent;
+	namespace Core\Repositories\Eloquent;
 
 	use App\Repositories\Contracts\RepositoryInterface;
 	use App\Repositories\Exceptions\RepositoryException;

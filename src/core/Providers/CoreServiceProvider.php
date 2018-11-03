@@ -1,11 +1,15 @@
 <?php
 
-	namespace App\Providers;
+	namespace Core\Providers;
 
 	use Illuminate\Support\ServiceProvider;
 
 	class CoreServiceProvider extends ServiceProvider
 	{
+		public function boot(){
+			$this->bootConfig();
+		}
+
 		/**
 		 * Register any application services.
 		 *
@@ -13,8 +17,7 @@
 		 */
 		public function register()
 		{
-			$this->setupAlias();
-			$this->setupConfig();
+			$this->registerAlias();
 			$this->registerSystem();
 			$this->registerServices();
 			$this->registerMiddleware();
@@ -41,7 +44,7 @@
 
 			$this->app->singleton(
 				\Illuminate\Contracts\Debug\ExceptionHandler::class,
-				\App\Exceptions\Handler::class
+				\Core\Exceptions\Handler::class
 			);
 		}
 
@@ -53,22 +56,22 @@
 			/**
 			 * Service Response
 			 */
-			$this->app->singleton('service.response', 'App\Services\ResponseService');
+			$this->app->singleton('service.response', 'Core\Services\ResponseService');
 
 			/**
 			 * Service Api
 			 */
-			$this->app->singleton('service.api', 'App\Services\ApiService');
+			$this->app->singleton('service.api', 'Core\Services\ApiService');
 
 			/**
 			 * Service ACL
 			 */
-			$this->app->singleton('service.acl', 'App\Services\ACLService');
+			$this->app->singleton('service.acl', 'Core\Services\ACLService');
 
 			/**
 			 * Service Log
 			 */
-			$this->app->singleton('service.log', 'App\Services\LogService');
+			$this->app->singleton('service.log', 'Core\Services\LogService');
 		}
 
 		/**
@@ -78,7 +81,7 @@
 		{
 			//call in all route for cors request
 			$this->app->middleware([
-				\App\Http\Middleware\CorsMiddleware::class
+				\Core\Http\Middleware\CorsMiddleware::class
 			]);
 
 			$this->app->routeMiddleware([
@@ -87,7 +90,7 @@
 
 				//middleware check if auth user is owner and can use routes
 				'owner' => [
-					'id' => \App\Http\Middleware\OwnerMiddleware::class, //Check id route with id auth user
+					'id' => \Core\Http\Middleware\OwnerMiddleware::class, //Check id route with id auth user
 				],
 			]);
 		}
@@ -110,13 +113,13 @@
 		/**
 		 * Load alias
 		 */
-		protected function setupAlias()
+		protected function registerAlias()
 		{
 			$aliases=[
-				'ResponseService' => \App\Facades\ResponseFacade::class,
-				'ApiService' => \App\Facades\ApiFacade::class,
-				'AclService' => \App\Facades\ACLFacade::class,
-				'LogService' => \App\Facades\LogFacade::class
+				'ResponseService' => \Core\Facades\ResponseFacade::class,
+				'ApiService' => \Core\Facades\ApiFacade::class,
+				'AclService' => \Core\Facades\ACLFacade::class,
+				'LogService' => \Core\Facades\LogFacade::class
 			];
 
 			foreach ($aliases as $key => $value){
@@ -127,11 +130,10 @@
 		/**
 		 * Load config
 		 */
-		protected function setupConfig() {
+		protected function bootConfig() {
 			$this->app->configure('cache');
 			$this->app->configure('database');
 			$this->app->configure('filesystems');
 			$this->app->configure('permission');
-			$this->app->configure('graphql');
 		}
 	}

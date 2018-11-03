@@ -1,5 +1,5 @@
 <?php
-	namespace App\Http\Middleware;
+	namespace Core\Http\Middleware;
 
 	use Closure;
 

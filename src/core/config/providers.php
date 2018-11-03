@@ -1,13 +1,13 @@
 <?php
 	return [
 		/*
-		 * Providers always load in App
+		 * Providers always load in Core
 		 */
 		'global' => [
-			'core' => \App\Providers\CoreServiceProvider::class,
-			'auth' => \App\Providers\AuthServiceProvider::class,
-			'graphql' => \App\Providers\GraphQLServiceProvider::class,
-			'app' => \App\Providers\AppServiceProvider::class,
+			'core' => \Core\Providers\CoreServiceProvider::class,
+			'auth' => \Core\Providers\AuthServiceProvider::class,
+			'graphql' => \Core\Providers\GraphQLServiceProvider::class,
+			'app' => \Core\Providers\AppServiceProvider::class,
 		],
 
 		/*

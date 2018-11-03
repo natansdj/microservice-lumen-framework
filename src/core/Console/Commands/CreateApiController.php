@@ -6,7 +6,7 @@
 	 * Time: 14.53
 	 */
 
-	namespace App\Console\Commands;
+	namespace Core\Console\Commands;
 
 	use Illuminate\Console\Command;
 	use Illuminate\Http\File;
@@ -170,7 +170,7 @@ EOT;
 			$file = Storage::disk('command')->put($file_destination, $fileContents);
 
 			if ($file) {
-				$this->info('Created new Api Controller ' . $name . 'Controller.php in App\Http\REST\\'. $version .'.');
+				$this->info('Created new Api Controller ' . $name . 'Controller.php in Core\Http\REST\\'. $version .'.');
 			} else {
 				$this->info('Something went wrong');
 			}

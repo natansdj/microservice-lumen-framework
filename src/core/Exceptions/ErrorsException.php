@@ -5,7 +5,7 @@
 	 * Date: 16/09/18
 	 * Time: 21.33
 	 */
-	namespace App\Exceptions;
+	namespace Core\Exceptions;
 
 	use ResponseService;
 	use Exception;

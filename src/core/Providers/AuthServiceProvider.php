@@ -1,6 +1,6 @@
 <?php
 
-	namespace App\Providers;
+	namespace Core\Providers;
 
 	use Gate;
 	use Illuminate\Support\ServiceProvider;
@@ -9,6 +9,7 @@
 	{
 		public function boot()
 		{
+			$this->bootConfig();
 			$this->policies();
 			$this->define();
 		}
@@ -20,8 +21,7 @@
 		 */
 		public function register()
 		{
-			$this->setupAlias();
-			$this->setupConfig();
+			$this->registerAlias();
 			$this->registerMiddleware();
 			$this->registerServices();
 			$this->registerProviders();
@@ -30,7 +30,7 @@
 		/**
 		 * Load config
 		 */
-		private function setupConfig()
+		private function bootConfig()
 		{
 			$this->app->configure('auth');
 			$this->app->configure('jwt');
@@ -59,12 +59,12 @@
 		/**
 		 * Load alias
 		 */
-		private function setupAlias()
+		private function registerAlias()
 		{
 			$aliases = [
 				'JWTAuth' => \Tymon\JWTAuth\Facades\JWTAuth::class,
 				'JWTFactory' => \Tymon\JWTAuth\Facades\JWTFactory::class,
-				'AuthService' => \App\Facades\AuthFacade::class,
+				'AuthService' => \Core\Facades\AuthFacade::class,
 			];
 
 			foreach ($aliases as $key => $value) {
@@ -78,8 +78,8 @@
 		private function registerMiddleware()
 		{
 			$this->app->routeMiddleware([
-				'api.jwt' => \App\Http\Middleware\JwtMiddleware::class,
-				'api.auth' => \App\Http\Middleware\AuthenticateMiddleware::class,
+				'api.jwt' => \Core\Http\Middleware\JwtMiddleware::class,
+				'api.auth' => \Core\Http\Middleware\AuthenticateMiddleware::class,
 				'can' => \Illuminate\Auth\Middleware\Authorize::class,
 			]);
 		}
@@ -92,7 +92,7 @@
 			/**
 			 * Service User Auth
 			 */
-			$this->app->bind('service.auth', 'App\Services\AuthService');
+			$this->app->bind('service.auth', 'Core\Services\AuthService');
 		}
 
 		/**

@@ -1,6 +1,6 @@
 <?php
 
-	namespace App\Providers;
+	namespace Core\Providers;
 
 	use Illuminate\Support\ServiceProvider;
 
@@ -14,6 +14,12 @@
 		public function register()
 		{
 			$this->app->configure('providers');
+
+			$this->registerProviders();
+			$this->registerAlias();
+		}
+
+		protected function registerProviders(){
 
 			/**
 			 * Load Global Providers
@@ -44,5 +50,15 @@
 			}
 		}
 
+		/**
+		 * Load alias
+		 */
+		protected function registerAlias()
+		{
+			$aliases= config('providers.alias');
 
+			foreach ($aliases as $key => $value){
+				class_alias($value, $key);
+			}
+		}
 	}

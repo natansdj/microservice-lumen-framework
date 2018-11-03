@@ -6,7 +6,7 @@
 	 * Time: 14.17
 	 */
 
-	namespace App\Http\GraphQL\Type\Contracts;
+	namespace Core\Http\GraphQL\Type;
 
 	use GraphQL\Type\Definition\Type;
 	use Folklore\GraphQL\Support\Type as GraphQLType;

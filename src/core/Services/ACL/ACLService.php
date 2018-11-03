@@ -6,7 +6,7 @@
 	 * Time: 16.51
 	 */
 
-	namespace App\Services;
+	namespace Core\Services;
 
 	use Spatie\Permission\Exceptions\PermissionAlreadyExists;
 	use Spatie\Permission\Exceptions\PermissionDoesNotExist;
@@ -18,7 +18,7 @@
 
 	/**
 	 * Class ACLService
-	 * @package App\Services\ACL
+	 * @package Core\Services\ACL
 	 */
 	class ACLService
 	{

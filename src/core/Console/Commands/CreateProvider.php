@@ -6,7 +6,7 @@
 	 * Time: 14.53
 	 */
 
-	namespace App\Console\Commands;
+	namespace Core\Console\Commands;
 
 	use Illuminate\Console\Command;
 	use Illuminate\Http\File;

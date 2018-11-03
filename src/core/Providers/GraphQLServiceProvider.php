@@ -1,12 +1,16 @@
 <?php
 
-	namespace App\Providers;
+	namespace Core\Providers;
 
 	use GraphQL;
 	use Illuminate\Support\ServiceProvider;
 
 	class GraphQLServiceProvider extends ServiceProvider
 	{
+		public function boot(){
+			$this->bootConfig();
+		}
+
 		/**
 		 * Register any application services.
 		 *
@@ -14,13 +18,12 @@
 		 */
 		public function register()
 		{
-			$this->setupConfig();
 			$this->registerProviders();
 			$this->typeContractsQL();
 			$this->typeQL();
 
 			//load alias TypeRegistry
-			class_alias(\App\Http\GraphQL\Type\Contracts\TypeRegistry::class, 'TypeRegistry');
+			class_alias(\Core\Http\GraphQL\Type\Contracts\TypeRegistry::class, 'TypeRegistry');
 		}
 
 		/**
@@ -34,7 +37,7 @@
 		/**
 		 * Load config
 		 */
-		protected function setupConfig() {
+		protected function bootConfig() {
 			$this->app->configure('graphql');
 			$this->app->configure('graphql_type');
 		}

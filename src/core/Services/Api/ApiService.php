@@ -6,9 +6,9 @@
 	 * Time: 16.30
 	 */
 
-	namespace App\Services;
+	namespace Core\Services;
 
-	use App\Helpers\Traits\Fractal;
+	use Core\Helpers\Traits\Fractal;
 
 
 	class ApiService

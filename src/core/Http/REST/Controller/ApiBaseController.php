@@ -1,12 +1,12 @@
 <?php
 
-	namespace App\Http\REST\v1;
+	namespace Core\Http\REST\v1;
 
 	use Laravel\Lumen\Routing\Controller as BaseController;
 
 	/**
 	 * Class ApiBaseController
-	 * @package App\Http\REST\v1
+	 * @package Core\Http\REST\v1
 	 */
 	class ApiBaseController extends BaseController
 	{

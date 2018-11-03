@@ -5,7 +5,7 @@
 	 * Date: 09/08/18
 	 * Time: 17.42
 	 */
-	namespace App\Facades;
+	namespace Core\Facades;
 
 	use Illuminate\Support\Facades\Facade;
 
