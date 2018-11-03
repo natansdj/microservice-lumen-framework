@@ -14,27 +14,26 @@
 		public function register()
 		{
 			$this->app->configure('providers');
-
 			$this->registerProviders();
 			$this->registerAlias();
 		}
 
-		protected function registerProviders(){
-
+		protected function registerProviders()
+		{
 			/**
 			 * Load Global Providers
 			 */
 			$globalProviders = config('providers.global');
-			foreach ($globalProviders as $globalProvider){
+			foreach ($globalProviders as $globalProvider) {
 				$this->app->register($globalProvider);
 			}
 
 			/**
 			 * Load Local Providers if env is 'local'
 			 */
-			if(app()->environment('local')){
+			if (app()->environment('local')) {
 				$localProviders = config('providers.local');
-				foreach ($localProviders as $localProvider){
+				foreach ($localProviders as $localProvider) {
 					$this->app->register($localProvider);
 				}
 			}
@@ -42,9 +41,9 @@
 			/**
 			 * Load Production Providers if env is 'production'
 			 */
-			if(app()->environment('production')){
+			if (app()->environment('production')) {
 				$productionProviders = config('providers.production');
-				foreach ($productionProviders as $productionProvider){
+				foreach ($productionProviders as $productionProvider) {
 					$this->app->register($productionProvider);
 				}
 			}
@@ -55,10 +54,11 @@
 		 */
 		protected function registerAlias()
 		{
-			$aliases= config('providers.alias');
-
-			foreach ($aliases as $key => $value){
-				class_alias($value, $key);
+			if (app()->environment('providers.alias')) {
+				$aliases = config('providers.alias');
+				foreach ($aliases as $key => $value) {
+					class_alias($value, $key);
+				}
 			}
 		}
 	}
