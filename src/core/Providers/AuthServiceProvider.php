@@ -9,7 +9,6 @@
 	{
 		public function boot()
 		{
-			$this->bootConfig();
 			$this->policies();
 			$this->define();
 		}
@@ -21,6 +20,7 @@
 		 */
 		public function register()
 		{
+			$this->registerConfig();
 			$this->registerAlias();
 			$this->registerMiddleware();
 			$this->registerServices();
@@ -30,7 +30,7 @@
 		/**
 		 * Load config
 		 */
-		private function bootConfig()
+		private function registerConfig()
 		{
 			$this->app->configure('auth');
 			$this->app->configure('jwt');

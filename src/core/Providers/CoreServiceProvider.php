@@ -6,10 +6,6 @@
 
 	class CoreServiceProvider extends ServiceProvider
 	{
-		public function boot(){
-			$this->bootConfig();
-		}
-
 		/**
 		 * Register any application services.
 		 *
@@ -17,6 +13,7 @@
 		 */
 		public function register()
 		{
+			$this->registerConfig();
 			$this->registerAlias();
 			$this->registerSystem();
 			$this->registerServices();
@@ -145,7 +142,7 @@
 		/**
 		 * Load config
 		 */
-		protected function bootConfig() {
+		protected function registerConfig() {
 			$this->app->configure('cache');
 			$this->app->configure('database');
 			$this->app->configure('filesystems');

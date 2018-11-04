@@ -8,10 +8,6 @@
 	{
 		private static $coreProviders;
 
-		public function boot(){
-			$this->bootConfig();
-		}
-
 		/**
 		 * Register any application services.
 		 *
@@ -19,6 +15,7 @@
 		 */
 		public function register()
 		{
+			$this->registerConfig();
 			$this->registerProviders();
 			$this->registerAlias();
 		}
@@ -69,7 +66,7 @@
 		/**
 		 * Load config
 		 */
-		protected function bootConfig() {
+		protected function registerConfig() {
 			$this->app->configure('providers');
 		}
 

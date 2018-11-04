@@ -7,20 +7,6 @@
 
 	class GraphQLServiceProvider extends ServiceProvider
 	{
-		public function boot()
-		{
-			$this->bootConfig();
-		}
-
-		/**
-		 * Load config
-		 */
-		protected function bootConfig()
-		{
-			$this->app->configure('graphql');
-			$this->app->configure('graphql_type');
-		}
-
 		/**
 		 * Register any application services.
 		 *
@@ -28,6 +14,7 @@
 		 */
 		public function register()
 		{
+			$this->registerConfig();
 			$this->registerProviders();
 			$this->registerContractsQL();
 			$this->registerTypeQL();
@@ -37,11 +24,19 @@
 		}
 
 		/**
+		 * Load config
+		 */
+		protected function registerConfig()
+		{
+			$this->app->configure('graphql');
+			$this->app->configure('graphql_type');
+		}
+
+		/**
 		 * Register providers dependency
 		 */
 		protected function registerProviders()
 		{
-
 			$this->app->register(\Folklore\GraphQL\LumenServiceProvider::class);
 		}
 
