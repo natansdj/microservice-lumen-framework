@@ -20,7 +20,7 @@
 			$this->registerTypeQL();
 
 			//load alias TypeRegistry
-			class_alias(\Core\Http\GraphQL\Type\TypeRegistry::class, 'TypeRegistry');
+			class_alias(\Core\Http\GraphQL\TypeRegistry::class, 'TypeRegistry');
 		}
 
 		/**

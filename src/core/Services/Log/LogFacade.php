@@ -5,14 +5,14 @@
 	 * Date: 09/08/18
 	 * Time: 17.42
 	 */
-	namespace Core\Facades;
+	namespace Core\Services\Log;
 
 	use Illuminate\Support\Facades\Facade;
 
-	class ResponseFacade extends Facade
+	class LogFacade extends Facade
 	{
 		protected static function getFacadeAccessor()
 		{
-			return 'service.response';
+			return 'service.log';
 		}
 	}

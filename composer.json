@@ -46,13 +46,7 @@
         "laravel": {
             "providers": [
                 "Core\\Providers\\ManagerServiceProvider"
-            ],
-            "aliases": {
-                "ACL": "Core\\Facades\\ACLFacade",
-                "Api": "Core\\Facades\\ApiFacade",
-                "Auth": "Core\\Facades\\AuthFacade",
-                "Log": "Core\\Facades\\LogFacade"
-            }
+            ]
         }
     },
     "config": {

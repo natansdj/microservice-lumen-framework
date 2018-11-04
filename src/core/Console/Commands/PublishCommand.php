@@ -4,7 +4,6 @@
 
 	use Illuminate\Console\Command;
 	use Illuminate\Filesystem\Filesystem;
-	use Core\config\auth;
 
 	class PublishCommand extends Command
 	{

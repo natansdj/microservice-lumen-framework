@@ -5,14 +5,14 @@
 	 * Date: 09/08/18
 	 * Time: 17.42
 	 */
-	namespace Core\Facades;
+	namespace Core\Services\Api;
 
 	use Illuminate\Support\Facades\Facade;
 
-	class AuthFacade extends Facade
+	class ApiFacade extends Facade
 	{
 		protected static function getFacadeAccessor()
 		{
-			return 'service.auth';
+			return 'service.api';
 		}
 	}

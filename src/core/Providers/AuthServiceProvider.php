@@ -64,7 +64,7 @@
 			$aliases = [
 				'JWTAuth' => \Tymon\JWTAuth\Facades\JWTAuth::class,
 				'JWTFactory' => \Tymon\JWTAuth\Facades\JWTFactory::class,
-				'AuthService' => \Core\Facades\AuthFacade::class,
+				'AuthService' => \Core\Services\Auth\AuthFacade::class,
 			];
 
 			foreach ($aliases as $key => $value) {

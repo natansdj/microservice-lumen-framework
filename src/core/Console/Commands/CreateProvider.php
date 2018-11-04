@@ -116,10 +116,7 @@
 	}
 EOT;
 
-			$dir_location = 'Providers';
-
-
-			$file_destination = $dir_location . '/' . $name . 'ServiceProvider.php';
+			$file_destination = 'app/Providers/' . $name . 'ServiceProvider.php';
 
 
 			$file = Storage::disk('command')->put($file_destination, $fileContents);

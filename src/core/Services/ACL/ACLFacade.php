@@ -5,14 +5,14 @@
 	 * Date: 09/08/18
 	 * Time: 17.42
 	 */
-	namespace Core\Facades;
+	namespace Core\Services\ACL;
 
 	use Illuminate\Support\Facades\Facade;
 
-	class LogFacade extends Facade
+	class ACLFacade extends Facade
 	{
 		protected static function getFacadeAccessor()
 		{
-			return 'service.log';
+			return 'service.acl';
 		}
 	}

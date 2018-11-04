@@ -6,7 +6,7 @@
 	 * Time: 16.54
 	 */
 
-	namespace Core\Http\Traits;
+	namespace Core\Services\Api\Traits;
 
 	use ResponseService;
 	use HelpersService;

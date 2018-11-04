@@ -8,7 +8,7 @@
 
 	namespace Core\Services\Response;
 
-	use Core\Http\Traits\HeadersREST;
+	use Core\Services\Response\Traits\HeadersREST;
 	use Carbon\Carbon;
 	use Symfony\Component\HttpKernel\Exception\HttpException;
 

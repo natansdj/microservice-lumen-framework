@@ -5,14 +5,14 @@
 	 * Date: 09/08/18
 	 * Time: 17.42
 	 */
-	namespace Core\Facades;
+	namespace Core\Services\Response;
 
 	use Illuminate\Support\Facades\Facade;
 
-	class ACLFacade extends Facade
+	class ResponseFacade extends Facade
 	{
 		protected static function getFacadeAccessor()
 		{
-			return 'service.acl';
+			return 'service.response';
 		}
 	}

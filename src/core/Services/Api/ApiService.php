@@ -8,7 +8,7 @@
 
 	namespace Core\Services\Api;
 
-	use Core\Http\Traits\Fractal;
+	use Core\Services\Api\Traits\Fractal;
 
 
 	class ApiService
