@@ -6,7 +6,7 @@
 	 * Time: 11.33
 	 */
 
-	namespace Core\Services;
+	namespace Core\Services\Auth;
 
 	use Tymon\JWTAuth\JWTAuth;
 	use Illuminate\Contracts\Auth\Guard;

@@ -1,8 +1,8 @@
 <?php
-	namespace Core\Repositories\Eloquent;
+	namespace Core\Repository\Eloquent;
 
-	use App\Repositories\Contracts\RepositoryInterface;
-	use App\Repositories\Exceptions\RepositoryException;
+	use Core\Repository\Contracts\RepositoryInterface;
+	use Core\Repository\Exceptions\RepositoryException;
 	use Illuminate\Database\Eloquent\Model;
 	use Illuminate\Container\Container as App;
 

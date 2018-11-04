@@ -92,7 +92,7 @@
 			/**
 			 * Service User Auth
 			 */
-			$this->app->bind('service.auth', 'Core\Services\AuthService');
+			$this->app->bind('service.auth', 'Core\Services\Auth\AuthService');
 		}
 
 		/**

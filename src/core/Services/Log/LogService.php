@@ -6,7 +6,7 @@
 	 * Time: 16.30
 	 */
 
-	namespace Core\Services;
+	namespace Core\Services\Log;
 
 	use Core\Exceptions\LogsException;
 	use Carbon\Carbon;

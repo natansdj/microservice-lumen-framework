@@ -14,6 +14,7 @@
 		public function register()
 		{
 			$this->app->configure('providers');
+
 			$this->registerProviders();
 			$this->registerAlias();
 		}
@@ -54,11 +55,9 @@
 		 */
 		protected function registerAlias()
 		{
-			if (app()->environment('providers.alias')) {
-				$aliases = config('providers.alias');
+				$aliases = config('providers.alias')?:[];
 				foreach ($aliases as $key => $value) {
 					class_alias($value, $key);
 				}
-			}
 		}
 	}

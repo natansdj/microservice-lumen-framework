@@ -6,7 +6,7 @@
 	 * Time: 19.06
 	 */
 
-	namespace App\Repositories\Contracts;
+	namespace Core\Repository\Contracts;
 
 	interface RepositoryInterface {
 

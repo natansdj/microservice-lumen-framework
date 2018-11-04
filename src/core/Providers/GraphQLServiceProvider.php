@@ -50,11 +50,9 @@
 		 */
 		protected function registerContractsQL()
 		{
-			if (app()->environment('graphql_type.contracts')) {
-				$contracts = config('graphql_type.contracts');
-				foreach ($contracts as $key => $contract) {
-					GraphQL::addType($contract, $key);
-				}
+			$contracts = config('graphql_type.contracts')?:[];
+			foreach ($contracts as $key => $contract) {
+				GraphQL::addType($contract, $key);
 			}
 		}
 
@@ -63,11 +61,9 @@
 		 */
 		protected function registerTypeQL()
 		{
-			if (app()->environment('graphql_type.model')) {
-				$models = config('graphql_type.model');
-				foreach ($models as $key => $model) {
-					GraphQL::addType($model, $key);
-				}
+			$models = config('graphql_type.model')?:[];
+			foreach ($models as $key => $model) {
+				GraphQL::addType($model, $key);
 			}
 		}
 	}

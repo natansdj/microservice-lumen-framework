@@ -22,7 +22,7 @@
 			$this->registerServices();
 			$this->registerMiddleware();
 			$this->registerProviders();
-			$this->registerConsole()();
+			$this->registerConsole();
 		}
 
 		/**
@@ -71,22 +71,22 @@
 			/**
 			 * Service Response
 			 */
-			$this->app->singleton('service.response', 'Core\Services\ResponseService');
+			$this->app->singleton('service.response', 'Core\Services\Response\ResponseService');
 
 			/**
 			 * Service Api
 			 */
-			$this->app->singleton('service.api', 'Core\Services\ApiService');
+			$this->app->singleton('service.api', 'Core\Services\Api\ApiService');
 
 			/**
 			 * Service ACL
 			 */
-			$this->app->singleton('service.acl', 'Core\Services\ACLService');
+			$this->app->singleton('service.acl', 'Core\Services\ACL\ACLService');
 
 			/**
 			 * Service Log
 			 */
-			$this->app->singleton('service.log', 'Core\Services\LogService');
+			$this->app->singleton('service.log', 'Core\Services\Log\LogService');
 		}
 
 		/**

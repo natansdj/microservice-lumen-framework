@@ -1,4 +1,4 @@
-<?php namespace App\Repositories\Exceptions;
+<?php namespace Core\Repositories\Exceptions;
 /**
  * Class RepositoryException
  * @package Prettus\Repository\Exceptions

@@ -6,7 +6,7 @@
 	 * Time: 16.51
 	 */
 
-	namespace Core\Services;
+	namespace Core\Services\ACL;
 
 	use Spatie\Permission\Exceptions\PermissionAlreadyExists;
 	use Spatie\Permission\Exceptions\PermissionDoesNotExist;

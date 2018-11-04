@@ -6,7 +6,7 @@
 	 * Time: 16.30
 	 */
 
-	namespace App\Services;
+	namespace Core\Services\Response;
 
 	use Core\Http\Traits\HeadersREST;
 	use Carbon\Carbon;
