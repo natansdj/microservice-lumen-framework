@@ -129,7 +129,7 @@
 		{
 			$aliases=[
 				'ResponseService' => \Core\Services\Response\ResponseFacade::class,
-				'ApiService' => \Core\FacServicesades\Api\ApiFacade::class,
+				'ApiService' => \Core\Services\Api\ApiFacade::class,
 				'AclService' => \Core\Services\ACL\ACLFacade::class,
 				'LogService' => \Core\Services\Log\LogFacade::class
 			];

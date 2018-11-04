@@ -1,8 +1,13 @@
-<?php namespace Core\Repositories\Exceptions;
-/**
- * Class RepositoryException
- * @package Prettus\Repository\Exceptions
- */
-class RepositoryException extends \Exception {
+<?php
 
-}
+	namespace Core\Repositories\Exceptions;
+
+	use Core\Exceptions\ErrorsException;
+
+	/**
+	 * Class RepositoryException
+	 * @package Prettus\Repository\Exceptions
+	 */
+	class RepositoryException extends ErrorsException {
+
+	}
