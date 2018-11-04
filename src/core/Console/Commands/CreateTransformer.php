@@ -19,7 +19,7 @@
 		 *
 		 * @var string
 		 */
-		protected $signature = "create:transformer";
+		protected $signature = "make:microservice:transformer";
 
 		/**
 		 * The console command description.

@@ -19,7 +19,7 @@
 		 *
 		 * @var string
 		 */
-		protected $signature = "create:repository";
+		protected $signature = "make:microservice:repository";
 
 		/**
 		 * The console command description.

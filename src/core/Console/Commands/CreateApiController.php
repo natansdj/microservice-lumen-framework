@@ -19,7 +19,7 @@
 		 *
 		 * @var string
 		 */
-		protected $signature = "create:api_controller";
+		protected $signature = "make:microservice:controller";
 
 		/**
 		 * The console command description.
@@ -152,7 +152,7 @@
 
 EOT;
 
-			$dir_location = 'Api/'. $version;
+			$dir_location = 'app/Http/REST/'. $version;
 
 			if(! Storage::exists($dir_location)) {
 				Storage::disk('command')->makeDirectory($dir_location);
@@ -182,7 +182,7 @@ EOT;
 
 	namespace App\Http\REST\\{$version};
 
-	use Laravel\Lumen\Routing\Controller as BaseController;
+	use Core\Http\REST\\{$version}\ApiBaseController as BaseController;
 
 	class ApiBaseController extends BaseController
 	{
