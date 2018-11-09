@@ -23,7 +23,7 @@
 		public $model;
 
 		/**
-		 * @var ResponseService
+		 * @var Response
 		 */
 		protected $response;
 

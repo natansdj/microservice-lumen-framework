@@ -22,13 +22,10 @@
         "aws/aws-sdk-php-laravel": "^3.2",
         "league/fractal": "^0.17.0",
         "folklore/graphql": "dev-develop",
-        "fabrizio-cafolla/microservice-lumen-cache": "dev-master"
+        "fabrizio-cafolla/microservice-lumen-cache": "dev-master",
+        "fabrizio-cafolla/response-http": "dev-master"
     },
-    "require-dev": {
-        "fzaninotto/faker": "~1.4",
-        "phpunit/phpunit": "~7.0",
-        "mockery/mockery": "~1.0"
-    },
+    "require-dev": {},
 
     "autoload": {
         "psr-4": {

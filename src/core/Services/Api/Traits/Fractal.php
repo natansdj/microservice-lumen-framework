@@ -8,8 +8,6 @@
 
 	namespace Core\Services\Api\Traits;
 
-	use ResponseService;
-	use HelpersService;
 	use League\Fractal\Pagination\IlluminatePaginatorAdapter;
 	use League\Fractal\Resource\Item;
 	use League\Fractal\Resource\Collection;

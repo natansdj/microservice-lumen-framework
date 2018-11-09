@@ -66,11 +66,6 @@
 		protected function registerServices()
 		{
 			/**
-			 * Service Response
-			 */
-			$this->app->singleton('service.response', 'Core\Services\Response\ResponseService');
-
-			/**
 			 * Service Api
 			 */
 			$this->app->singleton('service.api', 'Core\Services\Api\ApiService');
@@ -91,11 +86,6 @@
 		 */
 		protected function registerMiddleware()
 		{
-			//call in all route for cors request
-			$this->app->middleware([
-				\Core\Http\Middleware\CorsMiddleware::class
-			]);
-
 			$this->app->routeMiddleware([
 				'permission' => \Spatie\Permission\Middlewares\PermissionMiddleware::class,
 				'role' => \Spatie\Permission\Middlewares\RoleMiddleware::class,
@@ -128,7 +118,6 @@
 		protected function registerAlias()
 		{
 			$aliases=[
-				'ResponseService' => \Core\Services\Response\ResponseFacade::class,
 				'ApiService' => \Core\Services\Api\ApiFacade::class,
 				'AclService' => \Core\Services\ACL\ACLFacade::class,
 				'LogService' => \Core\Services\Log\LogFacade::class

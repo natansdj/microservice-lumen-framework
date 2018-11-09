@@ -2,7 +2,7 @@
 
 	namespace Core\Http\Middleware;
 
-	use ResponseService;
+	use Response;
 	use Closure;
 	use AuthService;
 	use Tymon\JWTAuth\Http\Middleware\BaseMiddleware;
@@ -22,7 +22,7 @@
 			$userLogged = AuthService::guard()->user();
 
 			if($idRequest !== strval($userLogged->id))
-				ResponseService::errorException('Unauthorized action.',405);
+				Response::errorException('Unauthorized action.',405);
 
 			return $next($request);
 		}

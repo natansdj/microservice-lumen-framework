@@ -16,7 +16,7 @@
 		public $api;
 
 		/**
-		 * @var ResponseService
+		 * @var Response
 		 */
 		public $response;
 
