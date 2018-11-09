@@ -101,15 +101,12 @@
 		 * Register providers dependency
 		 */
 		protected function registerProviders(){
-			$this->app->register(\Illuminate\Filesystem\FilesystemServiceProvider::class);
-
+			$this->app->register(\ResponseHTTP\HttpServiceProvider::class);
 			$this->app->register(\LumenCacheService\CacheServiceProvider::class);
-
 			$this->app->register(\Spatie\Permission\PermissionServiceProvider::class);
-
 			$this->app->register(\Aws\Laravel\AwsServiceProvider::class);
-
 			$this->app->register(\Folklore\GraphQL\LumenServiceProvider::class);
+			$this->app->register(\Illuminate\Filesystem\FilesystemServiceProvider::class);
 		}
 
 		/**
