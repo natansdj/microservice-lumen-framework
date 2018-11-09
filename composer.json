@@ -22,7 +22,7 @@
         "aws/aws-sdk-php-laravel": "^3.2",
         "league/fractal": "^0.17.0",
         "folklore/graphql": "dev-develop",
-        "fabrizio-cafolla/microservice-lumen-cache": "dev-master",
+        "fabrizio-cafolla/cache-system": "dev-master",
         "fabrizio-cafolla/response-http": "dev-master"
     },
     "require-dev": {},
