@@ -8,7 +8,7 @@
 
 	namespace Core\Services\ACL\Exceptions;
 
-	use Core\Exceptions\ErrorsException;
+	use ResponseHTTP\Response\Exceptions\ErrorsException;
 
 	class ACLException extends ErrorsException {
 		//Log Exception

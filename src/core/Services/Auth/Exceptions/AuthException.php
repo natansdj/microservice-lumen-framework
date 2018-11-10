@@ -8,7 +8,7 @@
 
 	namespace Core\Services\Auth\Exceptions;
 
-	use Core\Exceptions\ErrorsException;
+	use ResponseHTTP\Response\Exceptions\ErrorsException;
 
 	class AuthException extends ErrorsException {
 		//Log Exception

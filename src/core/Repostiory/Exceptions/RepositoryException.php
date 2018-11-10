@@ -2,7 +2,7 @@
 
 	namespace Core\Repositories\Exceptions;
 
-	use Core\Exceptions\ErrorsException;
+	use ResponseHTTP\Response\Exceptions\ErrorsException;
 
 	/**
 	 * Class RepositoryException

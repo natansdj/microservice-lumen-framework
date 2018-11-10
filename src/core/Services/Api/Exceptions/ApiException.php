@@ -8,7 +8,7 @@
 
 	namespace Core\Services\Api\Exceptions;
 
-	use Core\Exceptions\ErrorsException;
+	use ResponseHTTP\Response\Exceptions\ErrorsException;
 
 	class ApiException extends ErrorsException {
 		//Log Exception
