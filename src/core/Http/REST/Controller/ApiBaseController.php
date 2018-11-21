@@ -48,7 +48,7 @@
 		public function __construct()
 		{
 			$this->api = app('service.api');
-			$this->response = app('service.response.rest');
+			$this->response = app('service.response');
 			$this->auth = app('service.auth');
 			$this->acl = app('service.acl');
 			$this->cache = app('service.cache');
