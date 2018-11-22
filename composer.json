@@ -1,13 +1,13 @@
 {
-    "name": "fabrizio-cafolla/microservice-lumen-framework",
+    "name": "natansdj/microservice-lumen-framework",
     "description": "Framework of Microservice Lumen.",
     "keywords": ["framework", "laravel", "lumen", "REST", "GraphQL","cache", "redis"],
     "license": "MIT",
     "type": "lumen",
     "authors": [
         {
-            "name": "Fabrizio Cafolla",
-            "email": "info@fabriziocafolla.com"
+            "name": "Natan Sidjabat",
+            "email": "leavingtrailbehind@gmail.com"
         }
     ],
 
@@ -22,8 +22,8 @@
         "aws/aws-sdk-php-laravel": "^3.2",
         "league/fractal": "^0.17.0",
         "folklore/graphql": "dev-develop",
-        "fabrizio-cafolla/cache-system": "dev-master",
-        "fabrizio-cafolla/response-http": "dev-master"
+        "natansdj/cache-system": "dev-dev",
+        "natansdj/response-http": "dev-dev"
     },
     "require-dev": {},
 
@@ -38,7 +38,8 @@
 
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0-dev"
+            "dev-master": "1.0-dev",
+            "dev-dev": "2.0-dev"
         },
         "laravel": {
             "providers": [

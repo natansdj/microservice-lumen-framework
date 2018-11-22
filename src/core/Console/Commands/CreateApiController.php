@@ -1,10 +1,4 @@
 <?php
-	/**
-	 * Created by PhpStorm.
-	 * User: fabrizio
-	 * Date: 30/07/18
-	 * Time: 14.53
-	 */
 
 	namespace Core\Console\Commands;
 
@@ -57,22 +51,22 @@
 
 	class {$name}Controller extends ApiBaseController
 	{
-		
+
 		private \${$var};
-		
+
 		public function __construct({$repository} \${$var})
 		{
 			\$this->{$var} = \${$var};
 		}
-		
+
 		/**
 		 * Display a listing of resource.
 		 *
 		 * Get a JSON representation of all item.
 		 *
 		 * @Get url
-		 * @Versions 
-		 * @Response 
+		 * @Versions
+		 * @Response
 		 */
 		public function index() {}
 
@@ -82,9 +76,9 @@
 		 * Get a JSON representation of item.
 		 *
 		 * @Get url
-		 * @Versions 
-		 * @Request 
-		 * @Response 
+		 * @Versions
+		 * @Request
+		 * @Response
 		 */
 		public function show(\$id) {}
 
@@ -95,7 +89,7 @@
 		 * Get a JSON representation of item .
 		 *
 		 * @Get /create
-		 * @Versions 
+		 * @Versions
 		 * @Request()
 		 * @Response
 		 */
@@ -107,7 +101,7 @@
 		 * Get a JSON representation of new item.
 		 *
 		 * @Post url
-		 * @Versions 
+		 * @Versions
 		 * @Request(request)
 		 * @Response
 		 */
@@ -119,7 +113,7 @@
 		 * Get a JSON representation of update.
 		 *
 		 * @Get /{id}/edit
-		 * @Versions 
+		 * @Versions
 		 * @Request {id}
 		 * @Response
 		 */
@@ -131,7 +125,7 @@
 		 * Get a JSON representation of update.
 		 *
 		 * @Put /{id}
-		 * @Versions 
+		 * @Versions
 		 * @Request (request, id)
 		 * @Response
 		 */

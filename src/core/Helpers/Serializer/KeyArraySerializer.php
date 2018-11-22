@@ -1,10 +1,4 @@
 <?php
-	/**
-	 * Created by PhpStorm.
-	 * User: fabrizio
-	 * Date: 16/10/18
-	 * Time: 16.07
-	 */
 
 	namespace Core\Helpers\Serializer;
 

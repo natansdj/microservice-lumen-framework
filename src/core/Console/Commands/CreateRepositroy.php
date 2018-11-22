@@ -1,10 +1,4 @@
 <?php
-	/**
-	 * Created by PhpStorm.
-	 * User: fabrizio
-	 * Date: 30/07/18
-	 * Time: 14.53
-	 */
 
 	namespace Core\Console\Commands;
 

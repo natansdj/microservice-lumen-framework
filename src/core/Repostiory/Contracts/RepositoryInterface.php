@@ -1,10 +1,4 @@
 <?php
-	/**
-	 * Created by PhpStorm.
-	 * User: fabrizio
-	 * Date: 26/07/18
-	 * Time: 19.06
-	 */
 
 	namespace Core\Repository\Contracts;
 

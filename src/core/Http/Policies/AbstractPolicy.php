@@ -1,10 +1,4 @@
 <?php
-	/**
-	 * Created by PhpStorm.
-	 * User: fabrizio
-	 * Date: 30/10/18
-	 * Time: 18.25
-	 */
 
 	namespace Core\Http\Policies;
 

@@ -1,10 +1,4 @@
 <?php
-	/**
-	 * Created by PhpStorm.
-	 * User: fabrizio
-	 * Date: 06/08/18
-	 * Time: 16.51
-	 */
 
 	namespace Core\Services\ACL;
 

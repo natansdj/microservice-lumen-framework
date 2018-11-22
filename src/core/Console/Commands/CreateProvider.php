@@ -1,10 +1,4 @@
 <?php
-	/**
-	 * Created by PhpStorm.
-	 * User: fabrizio
-	 * Date: 30/07/18
-	 * Time: 14.53
-	 */
 
 	namespace Core\Console\Commands;
 
@@ -47,7 +41,7 @@
 
 	class {$name}ServiceProvider extends ServiceProvider
 	{
-		
+
 		/**
 		 * Boot the authentication services for the application.
 		 *
@@ -55,7 +49,7 @@
 		public function boot() {
 			\$this->bootConfig();
 		}
-		
+
 		/**
 		 * Register any application services.
 		 *

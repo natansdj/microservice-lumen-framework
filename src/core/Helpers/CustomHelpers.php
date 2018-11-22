@@ -1,10 +1,5 @@
 <?php
-	/**
-	 * Created by PhpStorm.
-	 * User: fabrizio
-	 * Date: 03/08/18
-	 * Time: 14.02
-	 */
+	
 	if ( ! function_exists('config_path'))
 	{
 		/**

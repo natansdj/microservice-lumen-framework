@@ -1,11 +1,5 @@
 <?php
-	/**
-	 * Created by PhpStorm.
-	 * User: fabrizio
-	 * Date: 06/08/18
-	 * Time: 11.33
-	 */
-
+	
 	namespace Core\Services\Auth;
 
 	use Tymon\JWTAuth\JWTAuth;

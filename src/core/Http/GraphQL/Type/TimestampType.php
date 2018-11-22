@@ -1,10 +1,4 @@
 <?php
-	/**
-	 * Created by PhpStorm.
-	 * User: fabrizio
-	 * Date: 27/10/18
-	 * Time: 14.17
-	 */
 
 	namespace Core\Http\GraphQL\Type;
 

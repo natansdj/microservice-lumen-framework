@@ -1,10 +1,4 @@
 <?php
-	/**
-	 * Created by PhpStorm.
-	 * User: fabrizio
-	 * Date: 20/10/18
-	 * Time: 16.54
-	 */
 
 	namespace Core\Services\Api\Traits;
 
